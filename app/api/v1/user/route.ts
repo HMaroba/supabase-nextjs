@@ -3,12 +3,12 @@ import prisma from "@/app/utils/prisma";
 
 export async function POST(req : NextRequest) {
 try {
-    const { title, authorId} = await req.json();
+    const { email, name} = await req.json();
 
-    const newTodo = await prisma.post.create({
+    const newTodo = await prisma.user.create({
         data: {
-            title,
-            authorId
+            email,
+            name
         }
     });
 
