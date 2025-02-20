@@ -13,6 +13,7 @@ try {
     });
 
    return NextResponse.json(newTodo);
+
 } catch (error) {
   return NextResponse.json({
     status : 500,
