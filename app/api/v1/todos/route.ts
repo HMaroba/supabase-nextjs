@@ -5,7 +5,7 @@ export async function POST(req : NextRequest) {
 try {
     const { title, authorId} = await req.json();
 
-    const newTodo = await prisma.todo.create({
+    const newTodo = await prisma.post.create({
         data: {
             title,
             authorId
